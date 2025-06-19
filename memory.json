@@ -1,0 +1,14 @@
+[
+  {
+    "topic": "Quick Test",
+    "type": "SkillDrill",
+    "input": "What is Javlin?",
+    "output": "A lightweight memory engine using JSON + Markdown.",
+    "score": 23,
+    "maxScore": 25,
+    "timestamp": "2025-06-19T15:36:58.005639Z",
+    "success": true,
+    "category": "system-knowledge",
+    "reviewed": false
+  }
+]
