@@ -46,6 +46,21 @@ All entries follow the open schema in `docs/memory_engine_spec.md`.
 
 ---
 
+### 🧩 Visual: Memory Lifecycle
+
+```mermaid
+flowchart TD
+    Start([Start Session])
+    Load[Load memory.json]
+    Adapt[Use memory to adapt behavior]
+    Interact[Agent Interaction]
+    Append[Append memory entry]
+    Save[Save memory.json]
+    Repeat[Next Session]
+
+    Start --> Load --> Adapt --> Interact --> Append --> Save --> Repeat
+
+
 ## 🧪 Try It Now (with ChatGPT or any GPT agent)
 
 1. Upload:
