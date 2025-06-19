@@ -11,7 +11,7 @@ It uses lightweight `.json` and `.md` files to give your AI workers long-term me
 Javlin is a portable memory engine built with:
 
 - `memory.json` – structured memory data
-- `memory_engine_spec.md` – how agents write/read/update memory
+- `docs/memory_engine_spec.md` – how agents write/read/update memory
 - `roles/*.md` – pluggable role files that define behavior
 
 ---
@@ -20,18 +20,36 @@ Javlin is a portable memory engine built with:
 
 Agents use this flow:
 
-1. Load `memory.json` on start
-2. Personalize behavior using past data
-3. Append new memory on session end
+1. Load `memory.json` on start  
+2. Personalize behavior using past data  
+3. Append new memory on session end  
 
 All updates follow the open `memory_engine_spec.md`.
+
+---
+
+## 🔁 How Memory Works (Lifecycle)
+
+Each agent session works like this:
+
+1. **Start** – Load the `memory.json` file  
+2. **Adapt** – Use memory to shape behavior and responses  
+3. **Append** – Add new memory entries based on what happened  
+4. **Repeat** – Grow long-term learning over time
+
+This makes the agent feel:
+- Personalized  
+- Evolving  
+- Context-aware
+
+All entries follow the open schema in `docs/memory_engine_spec.md`.
 
 ---
 
 ## 🧪 Try It Now (with ChatGPT or any GPT agent)
 
 1. Upload:
-   - `memory.json`
+   - `examples/memory_output_example.json`
    - `roles/javlin_demo_agent.md`
 2. Type:
 /start
@@ -54,33 +72,38 @@ You now have a memory-powered GPT assistant — no backend required.
 
 ## 💼 What’s in This Repo
 
-- `memory_engine_spec.md` – The full open schema
-- `memory.json` – Example memory file
-- `roles/javlin_demo_agent.md` – Reference agent role
-- `roadmap.md` – WIP roadmap
-- `LICENSE.md` – MIT licensed
+- `docs/memory_engine_spec.md` – The full open schema  
+- `examples/memory_output_example.json` – Sample memory entries  
+- `memory.json` – Live editable memory file  
+- `roles/javlin_demo_agent.md` – Reference agent role  
+- `roadmap.md` – WIP roadmap  
+- `LICENSE.md` – MIT licensed  
 - `README.md` – You’re reading it
 
 ---
 
 ## 🧭 Who This Is For
 
-- AI builders (GPT, Claude, Ollama)
-- Devs building co-pilots or assistants
-- Toolmakers who need persistent agent memory
+- AI builders (GPT, Claude, Ollama)  
+- Devs building co-pilots or assistants  
+- Toolmakers who need persistent agent memory  
 - Educators or evaluators training AI workers
 
 ---
 
-## 📈 Why It Matters
+## 🧠 Why This Changes Things
 
 Most AI agents start over every time.  
-Javlin gives them memory — with zero infrastructure.
+Javlin gives them **memory that lives outside the model.**
 
-- Modular
-- Open
-- No vendor lock
-- Easy to understand and extend
+That means:
+- No backend required  
+- No vendor lock-in  
+- No hallucinated context
+
+Just `.json` + `.md` files — readable by devs and GPT alike.
+
+It’s the simplest path to agents that **remember who you are, what you’ve done, and how to help you better** over time.
 
 ---
 
@@ -88,4 +111,5 @@ Javlin gives them memory — with zero infrastructure.
 
 Built by [@adkinsd2261](https://github.com/adkinsd2261)  
 Open to contributions, feedback, or integration ideas.
+
 
