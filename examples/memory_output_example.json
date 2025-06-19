@@ -1,0 +1,38 @@
+[
+  {
+    "topic": "Prompt Evaluation",
+    "type": "SkillDrill",
+    "input": "Rewrite the prompt to improve clarity and tone.",
+    "output": "You can revise it to: 'Summarize this article in a clear and professional tone.'",
+    "score": 20,
+    "maxScore": 25,
+    "timestamp": "2025-06-15T19:02:43Z",
+    "success": true,
+    "category": "clarity",
+    "reviewed": false
+  },
+  {
+    "topic": "Prompt Evaluation",
+    "type": "TrialSim",
+    "input": "Rate the following response using the rubric.",
+    "output": "Scored 18/25. Strength in structure, weakness in specificity.",
+    "score": 18,
+    "maxScore": 25,
+    "timestamp": "2025-06-17T20:13:10Z",
+    "success": false,
+    "category": "specificity",
+    "reviewed": false
+  },
+  {
+    "topic": "Personal Insight",
+    "type": "Note",
+    "input": "I keep forgetting to consider tone when scoring.",
+    "output": "Noted for review.",
+    "score": null,
+    "maxScore": null,
+    "timestamp": "2025-06-18T07:41:22Z",
+    "success": null,
+    "category": "self-reflection",
+    "reviewed": false
+  }
+]
